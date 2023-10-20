@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+</head>
+<body>
+    <h1>KMR mobile shop</h1>
+    <button onclick="changeHeading('Checkout our Store in online')">Change Title</button><br/><br/>
+    <button onclick="backGround()">Change Background</button><br/><br/>
+    <button onclick="changeAddress('10, xyz')">new Address</button><br>
+    <button onclick="changeClas()">click on link</button><br/><br/>
+    <button onclick="imageChange()">image class</button><br/><br>
+    <button onclick="textColor()">Change color</button>
+    <table border ="1">
+        <thead>
+            <tr>
+                <td><b>S.NO</b></td>
+                <td><b>Product Name</b></td>
+                <td><b>Image</b></td>
+                <td><b>Description</b></td>
+                <td><b>Price</b></td>
+                <td><b>Links</b></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    1.
+                </td>
+                <td>
+                    Mobile phone
+                </td>
+                <td>
+                    <img class="mobile" src="mobile.jpg">
+                </td>
+                <td>A mobile phone (or cellphone) is a portable telephone that can make and receive calls over a radio frequency link while the user is moving within a telephone service area</td>
+                <td class="Price">Rs.10,000</td>
+                <td><a href="https://www.amazon.in/Apple-iPhone-13-128GB-Blue/dp/B09G9BL5CP/ref=asc_df_B09G9BL5CP/?tag=googleshopdes-21&linkCode=df0&hvadid=586322031356&hvpos=&hvnetw=g&hvrand=10093407125088036973&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007810&hvtargid=pla-1649026114452&psc=1">Click here</a></td>
+            </tr>
+            <tr>
+                <td>
+                    2.
+                </td>
+                <td>
+                    Boat earbuds
+                </td>
+                <td>
+                    <img class="mobile" src="earbuds.jpg" alt="earbuds">
+                </td>
+                <td>
+                    Powered with boAt's Insta Wake n' Pair™ technology & ASAP™ Fast Charge, these true wireless earbuds power on and connect instantly
+                </td>
+                <td class="Price">Rs.2000</td>
+                <td><a href="https://www.amazon.in/Airdopes-141-Bluetooth-Wireless-Playtime/dp/B09N3XMZ5F/ref=asc_df_B09N3XMZ5F/?tag=googleshopdes-21&linkCode=df0&hvadid=544989932383&hvpos=&hvnetw=g&hvrand=11164127814678003080&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007810&hvtargid=pla-1562579184851&psc=1">Click Here</a></td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>
+                    power bank
+                </td>
+                <td>
+                    <img class="mobile" src="powerbank.jpg" alt="power bank">
+                </td>
+                <td>Charmast 26,800mAh. Check Amazon. View at Amazon. Good capacity at a low price. + Slim design</td>
+                <td class="price">Rs. 5500</td>
+                <td><a href="https://www.amazon.in/URBN-Premium-Charging-Smallest-Delivery/dp/B0BXSTYMZ7/ref=sr_1_18?crid=XLAN5MLD4OJD&keywords=power+bank&qid=1697814422&s=electronics&sprefix=power%2Celectronics%2C235&sr=1-18"></a></td>
+            </tr>
+        </tbody>
+    </table>
+    <footer id="address"><b>Address:</b></br>babc</br>12345</br></br><b>Phone No:</b>9012345678</footer>
+</br>
+</br>
+    <b>Message</b><br/>
+    <input class="message" type="text"/><br/>
+</br>
+    <button class="send"><b>Send</b></button>
+
+
+
+    <script>
+    const changeHeading = function () {
+      let h1node= document.querySelector("h1").innerText = "Mobile Shop";
+    
+    }
+    function backGround() {
+        document.body.style.backgroundColor = "olive";
+    }
+    function changeAddress(newAddress){
+    let footerNode = document.getElementsByTagName("footer")[0]
+    footerNode.innerText = newAddress
+}
+    function changeClas() {
+        let className = document.getElementsByTagName("a")
+        for (let index = 0; index < className.length; index++) {
+            const linkNode = className[index];
+            linkNode.classList.add("css")
+        }
+        
+    }
+    function imageChange() {
+        let image = document.getElementsByTagName("img")
+        for (let index = 0; index < image.length; index++) {
+            const allImage = image[index];
+            allImage.classList.toggle ("text")
+        }
+        
+    }
+
+    function textColor() {
+        let color = document.getElementsByClassName("price")
+        for(i=0;i<Color.length;i++){
+        let changeColor = color[i]
+        changeColor.classList.textColor = "orange";
+    }
+        
+    }
+
+    </script>
+</body>
+</html>
